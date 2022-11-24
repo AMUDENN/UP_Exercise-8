@@ -28,6 +28,7 @@ namespace UP_Exercise_8
         public MainWindow()
         {
             InitializeComponent();
+            RadioRus.IsChecked = true;
         }
 
         private void GetResultClick(object sender, RoutedEventArgs e)

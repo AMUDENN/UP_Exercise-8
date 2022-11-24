@@ -10,7 +10,7 @@
     <Grid>
         <Menu x:Name="Menu" Height="20" Style="{DynamicResource MenuStyle}" Background="White" >
             <MenuItem Header="Выберите язык" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
-                <RadioButton GroupName="Languages" Content="Русский" Checked="GetLanguageClick"/>
+                <RadioButton x:Name="RadioRus" GroupName="Languages" Content="Русский" Checked="GetLanguageClick"/>
                 <RadioButton GroupName="Languages" Content="Английский" Checked="GetLanguageClick"/>
             </MenuItem>
         </Menu>
