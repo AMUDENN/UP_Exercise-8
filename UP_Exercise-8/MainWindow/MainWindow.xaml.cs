@@ -40,5 +40,10 @@ namespace UP_Exercise_8
             InputText.Language = System.Windows.Markup.XmlLanguage.GetLanguage(langs[((RadioButton)sender).Content.ToString()]);
             LangName.Header = ((RadioButton)sender).Content.ToString();
         }
+
+        private void InputTextChanged(object sender, TextChangedEventArgs e)
+        {
+            Counter.Content = InputText.Text.Length;
+        }
     }
 }

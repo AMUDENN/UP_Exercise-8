@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UP_Exercise_8"
         mc:Ignorable="d"
         Title="Демьянов Артём 3ПКС-220 ПР8" Icon="Icon.ico"
-        Height="500" Width="800" ResizeMode="NoResize">
+        Height="550" Width="800" ResizeMode="NoResize">
     <Grid>
         <Menu x:Name="Menu" Height="20" Style="{DynamicResource MenuStyle}" Background="White" >
             <MenuItem Header="Выбранный язык:" Style="{DynamicResource MenuItemStyle}" Height="20" Width="120"/>
@@ -15,13 +15,14 @@
                 <RadioButton GroupName="Languages" Content="Английский" Checked="GetLanguageClick"/>
             </MenuItem>
         </Menu>
-        <Label Content="Проверка орфографии" Style="{DynamicResource LabelStyle}" Margin="205,10,205,395"/>
-        <Border Style="{DynamicResource BorderStyle}" Margin="50,70,50,110">
+        <Label Content="Проверка орфографии" Style="{DynamicResource LabelStyle}" Height="50" Margin="0,20,0,415" />
+        <Border Style="{DynamicResource BorderStyle}" Height="300" Margin="40,70,40,110" >
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,1,1,1">
-                <TextBox x:Name="InputText" Tag="Введите текст" Style="{DynamicResource TextBoxStyle}" Language ="ru" SpellCheck.IsEnabled="False" TextWrapping="Wrap" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Margin ="10,10,10,10"/>
+                <TextBox x:Name="InputText" Tag="Введите текст" TextChanged="InputTextChanged" Style="{DynamicResource TextBoxStyle}" Language ="ru" SpellCheck.IsEnabled="False" TextWrapping="Wrap" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Margin ="10,10,10,10"/>
             </ScrollViewer>
         </Border>
-        <Button x:Name="GetResult" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="GetResultClick" Margin="70,380,430,10" />
-        <Button x:Name="ClearBox" Content="Очистить поле" Style="{DynamicResource ButtonStyle}" Click="ClearField" Margin="430,380,70,10" />
+        <Button x:Name="GetResult" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="GetResultClick" Margin="70,410,430,40" />
+        <Button x:Name="ClearBox" Content="Очистить поле" Style="{DynamicResource ButtonStyle}" Click="ClearField" Margin="430,410,70,40" />
+        <Label x:Name="Counter" Content="0" Style="{DynamicResource LabelStyle}" HorizontalContentAlignment="Right" FontSize="14" Foreground="Gray" Margin="675,385,50,100"/>
     </Grid>
 </Window>
