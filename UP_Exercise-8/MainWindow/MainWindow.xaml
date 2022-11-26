@@ -9,15 +9,16 @@
         Height="500" Width="800" ResizeMode="NoResize">
     <Grid>
         <Menu x:Name="Menu" Height="20" Style="{DynamicResource MenuStyle}" Background="White" >
-            <MenuItem Header="Выберите язык" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+            <MenuItem Header="Выбранный язык:" Style="{DynamicResource MenuItemStyle}" Height="20" Width="120"/>
+            <MenuItem x:Name="LangName" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
                 <RadioButton x:Name="RadioRus" GroupName="Languages" Content="Русский" Checked="GetLanguageClick"/>
                 <RadioButton GroupName="Languages" Content="Английский" Checked="GetLanguageClick"/>
             </MenuItem>
         </Menu>
-        <Label Content="Исходный текст" Style="{DynamicResource LabelStyle}" FontSize="40" Margin="205,10,205,395"/>
+        <Label Content="Проверка орфографии" Style="{DynamicResource LabelStyle}" Margin="205,10,205,395"/>
         <Border Style="{DynamicResource BorderStyle}" Margin="50,70,50,110">
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,1,1,1">
-                <TextBox x:Name="InputText" Style="{DynamicResource TextBoxStyle}" Language ="ru" SpellCheck.IsEnabled="False" TextWrapping="Wrap" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Margin ="10,10,10,10"/>
+                <TextBox x:Name="InputText" Tag="Введите текст" Style="{DynamicResource TextBoxStyle}" Language ="ru" SpellCheck.IsEnabled="False" TextWrapping="Wrap" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Margin ="10,10,10,10"/>
             </ScrollViewer>
         </Border>
         <Button x:Name="GetResult" Content="Получить результат" Style="{DynamicResource ButtonStyle}" Click="GetResultClick" Margin="70,380,430,10" />
