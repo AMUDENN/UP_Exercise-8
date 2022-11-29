@@ -59,8 +59,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
                     <Grid>
-                        <Border CornerRadius="5" BorderBrush="Black" BorderThickness="0">
-                            <ScrollViewer x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        <Border BorderThickness="0">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
                         </Border>
                         <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Top"
                            Visibility="Collapsed" Foreground="Gray" FontSize="20" FontFamily="Arial"/>
@@ -72,9 +72,6 @@
                             </MultiTrigger.Conditions>
                             <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
                         </MultiTrigger>
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Foreground" Value="DimGray"/>
-                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
